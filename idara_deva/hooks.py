@@ -58,6 +58,15 @@ app_license = "MIT"
 # 	"filters": "idara_deva.utils.jinja_filters"
 # }
 
+doctype_js = {
+    "Sales Order" : "public/js/simplified_item_variants_selection.js", 
+    "Sales Invoice" : "public/js/simplified_item_variants_selection.js",
+    "Purchase Order" : "public/js/simplified_item_variants_selection.js",
+    "Purchase Invoice" : "public/js/simplified_item_variants_selection.js",
+    "Item" : "public/js/item.js",
+}
+
+
 # Installation
 # ------------
 
