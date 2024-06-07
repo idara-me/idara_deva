@@ -125,13 +125,16 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+
+doc_events = {
+	"Item": {
+		"after_insert": "item_variant.events.item.calculate_variants",
+		"on_trash": "item_variant.events.item.calculate_variants",
+	},
+    "Purchase Order":{
+        "validate": "item_variant.events.purchase_order.create_purchase_receipt",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
