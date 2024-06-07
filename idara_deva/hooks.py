@@ -10,10 +10,10 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/idara_deva/css/idara_deva.css"
-# app_include_js = "/assets/idara_deva/js/idara_deva.js"
+# app_include_js = "/assets/idara_deva/js/custom_script.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/idara_deva/css/idara_deva.css"
+web_include_css = "/assets/idara_deva/css/modal.css"
 # web_include_js = "/assets/idara_deva/js/idara_deva.js"
 
 # include custom scss in every website theme (without file extension ".scss")

@@ -1,0 +1,1 @@
+idara_deva.patches.remove_popup
