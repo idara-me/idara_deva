@@ -10,11 +10,11 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/idara_deva/css/idara_deva.css"
-# app_include_js = "/assets/idara_deva/js/custom_script.js"
+app_include_js = "/assets/idara_deva/js/auto_add_row.js"
 
 # include js, css files in header of web template
-web_include_css = "/assets/idara_deva/css/modal.css"
-# web_include_js = "/assets/idara_deva/js/idara_deva.js"
+# web_include_css = "/assets/idara_deva/css/modal.css"
+# web_include_js = "/assets/idara_deva/js/auto_add_row.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "idara_deva/public/scss/website"
@@ -27,7 +27,7 @@ web_include_css = "/assets/idara_deva/css/modal.css"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Item" : "public/js/auto_add_row.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
