@@ -64,6 +64,7 @@ doctype_js = {
     "Purchase Order" : "public/js/simplified_item_variants_selection.js",
     "Purchase Invoice" : "public/js/simplified_item_variants_selection.js",
     "Item" : "public/js/item.js",
+    "Sales Order" : "public/js/auto_submit.js",
 }
 
 
