@@ -1,8 +1,5 @@
 frappe.ui.form.on('Sales Order', {
-	after_save: function(frm) {
-
-    frappe.msgprint("document submited ")
-		
+	onload: function(frm) {
     frm.savesubmit = function(btn, callback, on_error) {
 			var me = this;
 			return new Promise((resolve) => {

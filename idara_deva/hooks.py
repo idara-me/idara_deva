@@ -129,11 +129,11 @@ doctype_js = {
 
 doc_events = {
 	"Item": {
-		"after_insert": "item_variant.events.item.calculate_variants",
-		"on_trash": "item_variant.events.item.calculate_variants",
+		"after_insert": "idara_deva.events.item.calculate_variants",
+		"on_trash": "idara_deva.events.item.calculate_variants",
 	},
     "Purchase Order":{
-        "validate": "item_variant.events.purchase_order.create_purchase_receipt",
+        "validate": "idara_deva.events.purchase_order.create_purchase_receipt",
     }
 }
 

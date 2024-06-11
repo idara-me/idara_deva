@@ -10,7 +10,7 @@ frappe.ui.form.on("Item", {
 
 const get_qty = (name) => {
   frappe.call({
-    method: "item_variant.events.item.calculate_qty",
+    method: "idara_deva.events.item.calculate_qty",
     args: {
       name,
     },

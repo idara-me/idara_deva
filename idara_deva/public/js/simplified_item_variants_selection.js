@@ -33,7 +33,7 @@ frappe.ui.form.on(cur_frm.doc.doctype, {
             }
             
             let query_args = {
-                query:"item_variant.events.item_variants.get_variants",
+                query:"idara_deva.events.item_variants.get_variants",
                 filters: { variant_of: template_item }
             }
 
