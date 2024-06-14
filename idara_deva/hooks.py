@@ -135,7 +135,7 @@ doc_events = {
 		"on_trash": "idara_deva.events.item.calculate_variants",
 	},
     "Purchase Order":{
-        "validate": "idara_deva.events.purchase_order.create_purchase_receipt",
+        "on_submit": "idara_deva.events.purchase_order.create_purchase_receipt",
     }
 }
 

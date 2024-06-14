@@ -1,17 +1,8 @@
 import frappe
+from erpnext.buying.doctype.purchase_order.purchase_order import make_purchase_receipt
 
 def create_purchase_receipt(doc , method = 'None'):
-    pr = frappe.get_doc({
-        'doctype': 'Purchase Receipt',
-        'supplier': doc.supplier
-    })
-  
-    for item in doc.items:
-         pr.append("items",{
-              "item_code":item.item_code,
-              "rate":item.rate
-         })
-
+    pr = make_purchase_receipt(doc.name)
     pr.insert()
     frappe.db.commit()
 
