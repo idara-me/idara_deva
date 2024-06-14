@@ -22,6 +22,21 @@ def calculate_variants(doc, method=None):
     
     item.custom_variants_count = len(item.custom_variants_item)
     item.save()
+
+def autoname(self, method=None):
+    template_item_code = self.variant_of
+    template_item_name = frappe.db.get_value("Item", self.variant_of, "item_name")
+
+    item_code = self.item_code.split(template_item_code)
+    if(len(item_code) > 1):
+        item_code = template_item_code + item_code[1].replace("-", "")
+        self.item_code = item_code
+        self.name = item_code
+
+    item_name = self.item_name.split(template_item_name)
+    if(len(item_name) > 1):
+        item_name = template_item_name + item_name[1].replace("-", "")
+        self.item_name = item_name
     
 @frappe.whitelist()
 def calculate_qty(name=None):

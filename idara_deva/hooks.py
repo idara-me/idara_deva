@@ -27,8 +27,17 @@ app_include_js = "/assets/idara_deva/js/auto_add_row.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Item" : "public/js/auto_add_row.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_js = {
+    "Sales Order" : "public/js/simplified_item_variants_selection.js", 
+    "Sales Invoice" : "public/js/simplified_item_variants_selection.js",
+    "Purchase Order" : "public/js/simplified_item_variants_selection.js",
+    "Purchase Invoice" : "public/js/simplified_item_variants_selection.js",
+    "Item" : "public/js/item.js",
+    "Sales Order" : "public/js/auto_submit.js",
+}
+
+doctype_list_js = {"Item" : "public/js/item_list.js"}
+
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -58,14 +67,6 @@ doctype_js = {"Item" : "public/js/auto_add_row.js"}
 # 	"filters": "idara_deva.utils.jinja_filters"
 # }
 
-doctype_js = {
-    "Sales Order" : "public/js/simplified_item_variants_selection.js", 
-    "Sales Invoice" : "public/js/simplified_item_variants_selection.js",
-    "Purchase Order" : "public/js/simplified_item_variants_selection.js",
-    "Purchase Invoice" : "public/js/simplified_item_variants_selection.js",
-    "Item" : "public/js/item.js",
-    "Sales Order" : "public/js/auto_submit.js",
-}
 
 
 # Installation
@@ -129,6 +130,7 @@ doctype_js = {
 
 doc_events = {
 	"Item": {
+		"autoname": "idara_deva.events.item.autoname",
 		"after_insert": "idara_deva.events.item.calculate_variants",
 		"on_trash": "idara_deva.events.item.calculate_variants",
 	},
