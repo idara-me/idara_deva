@@ -33,8 +33,9 @@
 				${r.message}
 				</button>
 			`);
-
-			$(`#page-${dt}`).find(".page-icon-group").append(button);
+			
+			$(".pagination-btn").remove()
+			$(`#page-${dt}`).find(".standard-actions").prepend(button);
 			}
 		});
 	};
