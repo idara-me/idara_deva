@@ -1,6 +1,6 @@
 app_name = "idara_deva"
 app_title = "Idara Deva"
-app_publisher = "NexTash(SMC-PVT)Ltd"
+app_publisher = "Idara"
 app_description = "Idara Deva app for variants"
 app_email = "support@nextash.com"
 app_license = "MIT"
