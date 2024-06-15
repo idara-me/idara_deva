@@ -1,15 +1,16 @@
 
 (function() {
 	const get_cur_doc_index = () => {
+		const dt = cur_frm.doc.doctype
 		let filters, sort_field, sort_order;
-		let list_view = frappe.get_list_view(cur_frm.doc.doctype);
+		let list_view = frappe.get_list_view(dt);
 
 		if (list_view) {
 			filters = list_view.get_filters_for_args();
 			sort_field = list_view.sort_by;
 			sort_order = list_view.sort_order;
 		} else {
-			let list_settings = frappe.get_user_settings(cur_frm.doc.doctype)["List"];
+			let list_settings = frappe.get_user_settings(dt)["List"];
 			if (list_settings) {
 			filters = list_settings.filters;
 			sort_field = list_settings.sort_by;
@@ -33,7 +34,7 @@
 				</button>
 			`);
 
-			$(".page-icon-group").append(button);
+			$(`#page-${dt}`).find(".page-icon-group").append(button);
 			}
 		});
 	};
