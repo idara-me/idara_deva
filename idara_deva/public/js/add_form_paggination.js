@@ -25,17 +25,21 @@
 			sort_order,
 			sort_field,
 		};
-
+		
+		if (cur_frm.is_new()) return;
 		frappe.call("idara_deva.events.item.get_cur_doc_index", args).then((r) => {
 			if (r.message) {
-			const button = $(`
-				<button class="text-muted btn btn-default pagination-btn icon-btn">
-				${r.message}
-				</button>
-			`);
-			
-			$(".pagination-btn").remove()
-			$(`#page-${dt}`).find(".standard-actions").prepend(button);
+				let id = 'page-' + dt.replace(/\s/g, '\\ ');
+				let selector = '#' + id;	
+				
+				const button = $(`
+					<button class="text-muted btn btn-default pagination-btn icon-btn">
+					${r.message}
+					</button>
+				`);
+
+				$(".pagination-btn").remove()
+				$(selector).find(".standard-actions").prepend(button);
 			}
 		});
 	};
