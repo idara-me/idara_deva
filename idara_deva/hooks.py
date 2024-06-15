@@ -10,7 +10,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/idara_deva/css/idara_deva.css"
-app_include_js = "/assets/idara_deva/js/auto_add_row.js"
+app_include_js = ["idara_deva.bundle.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/idara_deva/css/modal.css"
@@ -27,16 +27,9 @@ app_include_js = "/assets/idara_deva/js/auto_add_row.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-    "Sales Order" : "public/js/simplified_item_variants_selection.js", 
-    "Sales Invoice" : "public/js/simplified_item_variants_selection.js",
-    "Purchase Order" : "public/js/simplified_item_variants_selection.js",
-    "Purchase Invoice" : "public/js/simplified_item_variants_selection.js",
-    "Item" : "public/js/item.js",
-    "Sales Order" : "public/js/auto_submit.js",
-}
+doctype_js = { "Item" : "public/js/item.js" }
 
-doctype_list_js = {"Item" : "public/js/item_list.js"}
+doctype_list_js = { "Item" : "public/js/item_list.js" }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

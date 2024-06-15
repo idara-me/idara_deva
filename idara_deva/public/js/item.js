@@ -37,15 +37,6 @@ const get_qty = (name) => {
 };
 
 const bind_dashboard_events = (frm) => {
-  // function call
-  set_route(frm);
-  // frappe.set_route("query-report", "Variant Stock Ledger", frappe.utils.make_query_string({
-  //     item_code: ["in", item_names],
-  // }))
-};
-
-const set_route = (frm) => {
-  // Call the dashboard data function and load [Item Prices , purchase invoices ,Bin ,Sales Invoice ]
   dashboard_data(
     "custom_load_item_prices",
     "item-custom_extra_prices-tab",
@@ -53,6 +44,7 @@ const set_route = (frm) => {
     "List",
     "Item Price"
   );
+
   dashboard_data(
     "custom_load_purchase_invoices",
     "item-custom_purchased-tab",
@@ -60,6 +52,7 @@ const set_route = (frm) => {
     "List",
     "Purchase Invoice"
   );
+
   dashboard_data(
     "custom_load_bin",
     "item-custom_on_hand-tab",
@@ -67,6 +60,7 @@ const set_route = (frm) => {
     "List",
     "Bin"
   );
+
   dashboard_data(
     "custom_load_bin_3",
     "item-custom_forecasted-tab",
@@ -74,6 +68,7 @@ const set_route = (frm) => {
     "List",
     "Bin"
   );
+
   dashboard_data(
     "custom_load_sales_invoice",
     "item-custom_sold-tab",
@@ -81,6 +76,7 @@ const set_route = (frm) => {
     "List",
     "Sales Invoice"
   );
+
   // Load Query Report Variant Stock Ledger
   dashboard_data(
     "custom_load_stock_ledger",
@@ -101,9 +97,9 @@ const dashboard_data = (field_name, id, frm, view, dt) => {
       }
     }
     let filters = { item_code: ["in", item_names] };
-    
-    if(view == "query-report"){
-        filters = { item_code: item_names };
+
+    if (view == "query-report") {
+      filters = { item_code: item_names };
     }
 
     frappe.set_route(view, dt, filters);
