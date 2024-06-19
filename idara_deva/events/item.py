@@ -118,7 +118,11 @@ def get_cur_doc_index(doctype, docname, filters=None, sort_order="desc", sort_fi
 	)
 	
 	res = [row.name for row in res]
-	number = int(res.index(docname))+1
-	msg = f"{number} of {len(res)}"
+	if docname in res:
+		number = int(res.index(docname))+1
+		msg = f"{number} of {len(res)}"
+	else:
+		msg = "N/A"
+		
 	return msg
  
