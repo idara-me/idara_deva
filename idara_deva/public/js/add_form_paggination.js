@@ -46,7 +46,7 @@
 
 	frappe.router.on("change", function() {
 		var route = frappe.get_route();
-		if (route[0] === "Form") {
+		if (route.length > 2 && route[0] === "Form" && route[1] != route[2]) {
 			let get_page_number_interval= setInterval(() => {
 				if ($(".page-icon-group:visible").length) {
 					get_cur_doc_index();
