@@ -27,7 +27,9 @@ app_include_js = ["idara_deva.bundle.js"]
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = { "Item" : "public/js/item.js" }
+doctype_js = { "Item" : "public/js/item.js",
+                "Workstation" : "public/js/workstation.js"
+            }
 
 doctype_list_js = { "Item" : "public/js/item_list.js" }
 
