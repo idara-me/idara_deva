@@ -9,8 +9,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/idara_deva/css/idara_deva.css"
-app_include_js = ["idara_deva.bundle.js"]
+app_include_css = "/assets/idara_deva/css/idara_deva.css"
+app_include_js = ["idara_deva.bundle.js", "/assets/idara_deva/js/list_view_override.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/idara_deva/css/modal.css"
@@ -31,7 +31,10 @@ doctype_js = { "Item" : "public/js/item.js",
                 "Workstation" : "public/js/workstation.js"
             }
 
-doctype_list_js = { "Item" : "public/js/item_list.js" }
+doctype_list_js = { 
+    "Item" : "public/js/list_view_override.js",
+    "Sales Order" : "public/js/list_view_override.js",
+}
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
