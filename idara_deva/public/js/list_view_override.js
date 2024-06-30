@@ -642,7 +642,7 @@ frappe.views.ListView = class ListView extends frappe.views.BaseList {
 	
 		// clear rows
 		this.$result.find(".list-row-container").remove();
-		let group_by = localStorage.getItem("item_group_by")
+		let group_by = localStorage.getItem("item_group_by") || ""
 		
 		if (this.data.length > 0){
 			if (group_by.length) {
